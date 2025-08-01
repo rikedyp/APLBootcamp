@@ -11,6 +11,39 @@
     42 43
     ```
 
+1. Given
+
+    ```apl
+    vec ← (1 2 3) (1 (2 3)) (1 2 3)
+    ```
+
+    1. What is the shape, rank and depth of `vec`?
+    1. Use a single multiplication (`×`) to get the following results:
+        1. 
+            ```
+            ┌─────┬───────┬─────┐
+            │2 4 6│┌─┬───┐│2 4 6│
+            │     ││2│4 6││     │
+            │     │└─┴───┘│     │
+            └─────┴───────┴─────┘
+            ```
+        1. 
+            ```
+            ┌─────┬───────┬─────┐
+            │2 4 6│┌─┬───┐│2 4 6│
+            │     ││1│2 3││     │
+            │     │└─┴───┘│     │
+            └─────┴───────┴─────┘
+            ```
+        1. 
+            ```
+            ┌─────┬───────┬─────┐
+            │2 4 6│┌─┬───┐│1 2 3│
+            │     ││1│4 6││     │
+            │     │└─┴───┘│     │
+            └─────┴───────┴─────┘
+            ```
+
 1. Write a monadic function `Join` which joins a nested vector of character vectors `⍵` into a single, non-nested character vector in which elements from `⍵` are separated by the character scalar `,` (comma).
 
 	```APL

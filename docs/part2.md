@@ -1,5 +1,51 @@
 # Part 2
 
+## Spot the Difference
+In each of the following scenarios, think:
+- What output was intended?
+- Why doesn't the written expression product the intended output?
+- What would you change to fix the expression?
+
+1. I have 100 sweets in a bowl. I give 10 to James, 13 to Vela, 11 to Malai and 14 to Alex. 31 fall
+on the floor and the bowl breaks. How many do I have left?
+
+	```apl
+	100 – 10 – 13 – 11 – 14 - 31
+	```
+
+1. Find $3+\sqrt[3]{27}$
+
+	```apl
+	3 + ÷3*27
+	```
+
+1. Find the distance between the points (3,12) and (6,16) in Euclidean space
+
+	```apl
+	((16-12)*2 + (6-3)*2)*0.5
+	```
+
+1. List the numbers from 13 to 27 inclusive
+
+	```apl
+	⍳ 27 - 13
+	```
+
+1. Return 1 when X>3 and X≤7
+
+	```apl
+	X ← 10
+	X > 3 ∧ X ≤ 7
+	```
+
+1. Sum the salaries of employees in group G
+
+	```apl
+	Grp ← 'AFGFG'
+	Sal ← 32000 33500 41000 33900 41500
+	+/ Grp='G' / Sal
+	```
+
 ## Vectors and Matrices
 1. Define the numeric vector `nums`
 	
