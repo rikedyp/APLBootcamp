@@ -9,8 +9,6 @@ theme:
   logo: styles/dyalog-logo_white.svg
 markdown_extensions:
   - admonition
-  - pymdownx.highlight:
-      use_pygments: false
   - pymdownx.arithmatex:
       generic: true
   - md_in_html
