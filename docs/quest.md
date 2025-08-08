@@ -155,7 +155,7 @@ Write a function that behaves like the APL <em>index-of</em> function <a href="h
 ## 2021-6: Fischer Random Chess
 
 <div>
-<img src="/img/chess-board.png" style="width:250px;float:right;margin-left:20px;filter: invert(.75)hue-rotate(180deg);"/> 
+<img src="../img/chess-board.png" style="width:250px;float:right;margin-left:20px;filter: invert(.75)hue-rotate(180deg);"/> 
 </div>
 <div><p>According to <a href="https://en.wikipedia.org/wiki/Fischer_random_chess">Wikipedia</a>, Fischer random chess is a
       variation of the game of chess invented by former world chess champion Bobby Fischer. Fischer random chess employs
