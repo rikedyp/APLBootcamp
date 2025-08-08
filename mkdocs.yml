@@ -6,7 +6,7 @@ theme:
   name: material
   favicon: style/favicon-32.png
   language: en
-  logo: styles/dyalog-logo_white.svg
+  logo: img/dyalog-logo_white.svg
 markdown_extensions:
   - admonition
   - pymdownx.arithmatex:
