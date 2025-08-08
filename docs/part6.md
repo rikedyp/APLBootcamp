@@ -157,4 +157,39 @@ The author of the function modifies it to exhibit certain error handling behavio
 
     1. Add the new reporting functionality to your fixed version of the app.
     
-    1. **BONUS:** Rewrite the app to use `:Trap` instead of `⎕TRAP`
+    1. Rewrite the app to use `:Trap` instead of `⎕TRAP`
+
+## Indian Summer
+[IndiaRainfall.csv](./assets/IndiaRainfall.csv) is a file of [comma separated values](https://simple.wikipedia.org/wiki/Comma-separated_values). It is adapted from [IndiaRainfallSource.csv](./assets/IndiaRainfallSource.csv) to remove incomplete records.
+
+The [India Meteorological Department(IMD)](http://www.imd.gov.in/) has shared this dataset under [Govt. Open Data License - India](https://data.gov.in/government-open-data-license-india). It can be downloaded from the links above or from [the Kaggle data science website](https://www.kaggle.com/rajanand/rainfall-in-india).
+
+The data contains the total measured monthly rain fall in millimeters for `30` regions in India from the years `1915` to `2015` inclusive.
+
+1. Load the data into the workspace
+
+	??? Hint
+		Press <kbd>F1</kbd> or use the `]Help` user command to view the documentation for `⎕CSV`.
+
+	!!! Hint "Bonus"
+		Try reading **IndiaRainfallSource.csv** and removing the missing records for yourself. When data sets contain a very small amount of missing data, sometimes it is appropriate to estimate those values in a process called [imputation](https://en.wikipedia.org/wiki/Imputation_%28statistics%29). Often, it is best to just remove the records with missing fields.
+
+1. What was the total rainfall in Punjab in 1995?
+1. Which month in which region had the highest rainfall in 1995?
+1. Use a least squares linear fit to estimate the total rainfall in all 30 regions in 1905
+
+	??? Hint
+		No one would expect you to derive an expression for the least squares linear fit. If you have done it, kudos to you. The expression `Mv(⊢⌹1,∘⍪⊣)Nv` from [APLcart](https://aplcart.info/?q=linear%20regression#) will compute coefficients of a least squares linear fit given a vector of X values `Mv` and a vector of Y values `Nv`.
+
+1. Inspect the data in **IndiaRainfallSource.csv** to see how close the true values were to your estimates. What was the standard error?
+
+	??? Hint
+		If the error `e` is a vector of the differences between Y values predicted by the linear fit and the actual Y values
+		
+		$$e_i=Y_i^{\text{predicted}}-Y_i^{\text{actual}}$$
+		
+		then an estimate for the variance is given by
+		
+		$$s^2=\sum_{i=1}^n{{e_i^2}\over{n-2}}$$
+		
+		where the standard deviation (standard error) is $s$.
