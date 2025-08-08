@@ -1,0 +1,1742 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../part6/">
+      
+      
+      
+      <link rel="icon" href="../style/favicon-32.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Quest Problems - APL Bootcamp Materials</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bcfcd587.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../style/main.css">
+    
+      <link rel="stylesheet" href="../styles/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quest-problems" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="APL Bootcamp Materials" class="md-header__button md-logo" aria-label="APL Bootcamp Materials" data-md-component="logo">
+      
+  <img src="../styles/dyalog-logo_white.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            APL Bootcamp Materials
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quest Problems
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/rikedyp/APLBootcamp" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="APL Bootcamp Materials" class="md-nav__button md-logo" aria-label="APL Bootcamp Materials" data-md-component="logo">
+      
+  <img src="../styles/dyalog-logo_white.svg" alt="logo">
+
+    </a>
+    APL Bootcamp Materials
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/rikedyp/APLBootcamp" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Quest Problems
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Quest Problems
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2013-2-put-it-in-reverse" class="md-nav__link">
+    <span class="md-ellipsis">
+      2013-2: Put It In Reverse
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2014-2-how-tweet-it-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      2014-2: How Tweet It Is
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2023-6-keyvalue-pairs" class="md-nav__link">
+    <span class="md-ellipsis">
+      2023-6: Key/Value Pairs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2022-6-pyramid-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      2022-6: Pyramid Scheme
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2021-2-index-of-modified" class="md-nav__link">
+    <span class="md-ellipsis">
+      2021-2: Index-Of Modified
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2021-2: Index-Of Modified">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2021-6-fischer-random-chess" class="md-nav__link">
+    <span class="md-ellipsis">
+      2021-6: Fischer Random Chess
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2021-6: Fischer Random Chess">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2021-7-can-you-feel-the-magic" class="md-nav__link">
+    <span class="md-ellipsis">
+      2021-7: Can You Feel the Magic?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2021-7: Can You Feel the Magic?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2021-10-on-the-right-side" class="md-nav__link">
+    <span class="md-ellipsis">
+      2021-10: On the Right Side
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2021-10: On the Right Side">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2019-2-making-the-grade" class="md-nav__link">
+    <span class="md-ellipsis">
+      2019-2: Making the Grade
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2019-2: Making the Grade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2019-5-doubling-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      2019-5: Doubling Up
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2019-5: Doubling Up">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2019-6-telephone-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      2019-6: Telephone Names
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2019-6: Telephone Names">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2018-3-rolling-along" class="md-nav__link">
+    <span class="md-ellipsis">
+      2018-3: Rolling Along
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2018-3: Rolling Along">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2018-4-whats-your-sign" class="md-nav__link">
+    <span class="md-ellipsis">
+      2018-4: What's Your Sign?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2018-4: What's Your Sign?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2018-5-whats-your-sign-revisited" class="md-nav__link">
+    <span class="md-ellipsis">
+      2018-5: What's Your Sign? Revisited
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2018-5: What's Your Sign? Revisited">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2018-10-anagrammatically-correct" class="md-nav__link">
+    <span class="md-ellipsis">
+      2018-10: Anagrammatically Correct
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2018-10: Anagrammatically Correct">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2016-4-just-meshing-around" class="md-nav__link">
+    <span class="md-ellipsis">
+      2016-4: Just Meshing Around
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2016-4: Just Meshing Around">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2016-6-shorter-ones-to-the-front" class="md-nav__link">
+    <span class="md-ellipsis">
+      2016-6: Shorter Ones to the Front
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2016-6: Shorter Ones to the Front">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2013-2-put-it-in-reverse" class="md-nav__link">
+    <span class="md-ellipsis">
+      2013-2: Put It In Reverse
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2014-2-how-tweet-it-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      2014-2: How Tweet It Is
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2023-6-keyvalue-pairs" class="md-nav__link">
+    <span class="md-ellipsis">
+      2023-6: Key/Value Pairs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2022-6-pyramid-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      2022-6: Pyramid Scheme
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2021-2-index-of-modified" class="md-nav__link">
+    <span class="md-ellipsis">
+      2021-2: Index-Of Modified
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2021-2: Index-Of Modified">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2021-6-fischer-random-chess" class="md-nav__link">
+    <span class="md-ellipsis">
+      2021-6: Fischer Random Chess
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2021-6: Fischer Random Chess">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2021-7-can-you-feel-the-magic" class="md-nav__link">
+    <span class="md-ellipsis">
+      2021-7: Can You Feel the Magic?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2021-7: Can You Feel the Magic?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2021-10-on-the-right-side" class="md-nav__link">
+    <span class="md-ellipsis">
+      2021-10: On the Right Side
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2021-10: On the Right Side">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2019-2-making-the-grade" class="md-nav__link">
+    <span class="md-ellipsis">
+      2019-2: Making the Grade
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2019-2: Making the Grade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2019-5-doubling-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      2019-5: Doubling Up
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2019-5: Doubling Up">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2019-6-telephone-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      2019-6: Telephone Names
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2019-6: Telephone Names">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2018-3-rolling-along" class="md-nav__link">
+    <span class="md-ellipsis">
+      2018-3: Rolling Along
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2018-3: Rolling Along">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2018-4-whats-your-sign" class="md-nav__link">
+    <span class="md-ellipsis">
+      2018-4: What's Your Sign?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2018-4: What's Your Sign?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2018-5-whats-your-sign-revisited" class="md-nav__link">
+    <span class="md-ellipsis">
+      2018-5: What's Your Sign? Revisited
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2018-5: What's Your Sign? Revisited">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2018-10-anagrammatically-correct" class="md-nav__link">
+    <span class="md-ellipsis">
+      2018-10: Anagrammatically Correct
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2018-10: Anagrammatically Correct">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2016-4-just-meshing-around" class="md-nav__link">
+    <span class="md-ellipsis">
+      2016-4: Just Meshing Around
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2016-4: Just Meshing Around">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2016-6-shorter-ones-to-the-front" class="md-nav__link">
+    <span class="md-ellipsis">
+      2016-6: Shorter Ones to the Front
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2016-6: Shorter Ones to the Front">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="quest-problems">Quest Problems</h1>
+<p>These are selected problems from the <a href="https://apl.quest">APL Quest</a> that exercise concepts especially important for beginners and used by APL practitioners in almost all domains.</p>
+<h2 id="2013-2-put-it-in-reverse">2013-2: Put It In Reverse</h2>
+<p>The <em>find</em> function <a href="https://help.dyalog.com/latest/#Language/Primitive%20Functions/Find.htm" class="APL" target="_blank">X⍷Y</a> identifies the beginnings of occurrences of array <span class="APL">X</span> in array <span class="APL">Y</span>.</p>
+<p>In this problem, you're asked to return a result that identifies the endings of occurrences of array <span class="APL">X</span> in array <span class="APL">Y</span>. To keep things simple, <span class="APL">X</span> and <span class="APL">Y</span> will be at most rank 1, meaning they'll either be vectors or scalars.</p>
+<p>Write a function that:</p>
+<ul>
+    <li>takes a scalar or vector left argument</li>
+    <li>takes a scalar or vector right argument</li>
+    <li>returns a Boolean result that is the same shape as the right argument where 1's mark the ends of occurrences of the left argument in the right argument</li>
+</ul>
+<p><i class="fas fa-lightbulb-on"></i> <strong>Hint:</strong> The <em>find</em> function <a href="https://help.dyalog.com/latest/#Language/Primitive%20Functions/Find.htm" class="APL" target="_blank">⍷</a> and <em>reverse</em> function <a href="https://help.dyalog.com/latest/#Language/Primitive%20Functions/Reverse.htm" class="APL" target="_blank">⌽</a> could be helpful in solving this problem.</p>
+<hr />
+<h5>Examples</h5>
+
+<div class="highlight"><pre><span></span><code>      &#39;abra&#39; (&lt;i&gt;your_function&lt;/i&gt;) &#39;abracadabra&#39;
+0 0 0 1 0 0 0 0 0 0 1
+
+      &#39;issi&#39; (&lt;i&gt;your_function&lt;/i&gt;) &#39;Mississippi&#39;
+0 0 0 0 1 0 0 1 0 0 0
+
+      &#39;bb&#39; (&lt;i&gt;your_function&lt;/i&gt;) &#39;bbb bbb&#39;
+0 1 1 0 0 1 1
+
+      (,42) (&lt;i&gt;your_function&lt;/i&gt;) 42
+0
+
+      42 (&lt;i&gt;your_function&lt;/i&gt;) 42
+1
+
+      (,42) (&lt;i&gt;your_function&lt;/i&gt;) ,42
+1
+
+      &#39;are&#39; &#39;aquatic&#39; (&lt;i&gt;your_function&lt;/i&gt;) &#39;ducks&#39; &#39;are&#39; &#39;aquatic&#39; &#39;avians&#39; 
+0 0 1 0
+</code></pre></div>
+<h2 id="2014-2-how-tweet-it-is">2014-2: How Tweet It Is</h2>
+<p>Twitter messages have a 140 character limit; what if the limit was even shorter? One way to shorten the message yet retain most readability is to remove interior vowels from its words. Write a dfn which takes a character vector and removes the interior vowels from each word.</p>
+<h4>Examples</h4>
+
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">your_function</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;if you can read this, it worked!&#39;</span>
+<span class="nv">if</span><span class="w"> </span><span class="nv">yu</span><span class="w"> </span><span class="nv">cn</span><span class="w"> </span><span class="nv">rd</span><span class="w"> </span><span class="nv">ths</span><span class="o">,</span><span class="w"> </span><span class="nv">it</span><span class="w"> </span><span class="nv">wrkd</span><span class="o">!</span>
+<span class="w">      </span><span class="p">(</span><span class="nv">your_function</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;APL is REALLY cool&#39;</span>
+<span class="nv">APL</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">RLLY</span><span class="w"> </span><span class="nv">cl</span>
+<span class="w">      </span><span class="p">(</span><span class="nv">your_function</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="c1">⍝ an empty vector arg should return an empty vector</span>
+
+<span class="w">      </span><span class="p">(</span><span class="nv">your_function</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;a&#39;</span><span class="w"> </span><span class="c1">⍝ should work with a single character message</span>
+<span class="nv">a</span>
+</code></pre></div>
+<h2 id="2023-6-keyvalue-pairs">2023-6: Key/Value Pairs</h2>
+<p>Representing data as key/value pairs (also known as name/value pairs) is a very common technique. For example, it can be found in query strings in HTTP URIs, attribute settings in HTML elements, and in JSON objects. One common representation for a key/value pair is to have a character key (name) followed by an equals sign (=) followed by the value. Multiple key/value pairs can be separated by a delimiter character or characters. For example:</p>
+<pre class="APL">
+      key1=value1;key2=value2
+</pre>
+
+<p>Write a function that:</p>
+<ul>
+  <li>takes a 2-element character vector left argument where the first element represents the separator character between multiple key/value pairs and the second element represents the separator between the key and the value for each pair.</li>
+  <li>takes a character vector right argument representing a valid set of key/value pairs (delimited as specified by the left argument).</li>
+  <li>returns a 2-column matrix where the first column contains the character vector keys of the key/value pairs and the second column contains the character vector values.</li>
+</ul>
+<p><strong>Note:</strong> You may assume that there will be no empty names or values in the right argument.</p>
+<p><i class="fas fa-lightbulb-on"></i> <strong>Hint:</strong> The <em>partition</em> function <a href="https://help.dyalog.com/latest/#Language/Primitive%20Functions/Partition.htm" class="APL" target="_blank">⊆</a> could be helpful in solving this problem.</p>
+<hr>
+<h5>Examples</h5>
+
+<div class="highlight"><pre><span></span><code>      ⍴ ⎕← &#39; =&#39;(&lt;i&gt;your_function&lt;/i&gt;)&#39;language=APL dialect=Dyalog&#39; 
+┌────────┬──────┐
+│language│APL   │
+├────────┼──────┤
+│dialect │Dyalog│
+└────────┴──────┘
+2 2      
+
+      ⍴ ⎕← &#39;;:&#39;(&lt;i&gt;your_function&lt;/i&gt;)&#39;duck:donald&#39; 
+┌────┬──────┐
+│duck│donald│
+└────┴──────┘
+1 2      
+
+      ⍴ ⎕← &#39;/:&#39;(&lt;i&gt;your_function&lt;/i&gt;)&#39;name:Morten/name:Brian/name:Adám&#39;
+┌────┬──────┐
+│name│Morten│
+├────┼──────┤
+│name│Brian │
+├────┼──────┤
+│name│Adám  │
+└────┴──────┘
+3 2
+</code></pre></div>
+<h2 id="2022-6-pyramid-scheme">2022-6: Pyramid Scheme</h2>
+<p>Write a monadic function that:</p>
+<ul>
+    <li>takes an argument <em>n</em> that is an integer scalar in the range 0-100.</li>
+    <li>returns a square matrix "pyramid" with <span class="APL">0⌈¯1+2×n</span> rows and columns of <span class="APL">n</span> increasing concentric levels.<br/>
+        By this we mean that the center element of the matrix will be <span class="APL">n</span>, surrounded on all sides by <span class="APL">n-1</span>.</li>
+</ul>
+<p><i class="fas fa-lightbulb-on"></i> <strong>Hint:</strong> The functions <em>minimum</em> <a href="https://help.dyalog.com/latest/#Language/Primitive%20Functions/Minimum.htm" class="APL" target="_blank">X⌊Y</a> and <em>reverse</em> <a href="https://help.dyalog.com/latest/#Language/Primitive%20Functions/Reverse.htm"
+      class="APL" target="_blank">⌽Y</a>, and the <em>outer product</em> operator <a href="http://help.dyalog.com/latest/#Language/Primitive%20Operators/Outer%20Product.htm"
+      class="APL" target="_blank">X∘.gY</a> could be helpful.</p>
+<hr/>
+<h3>Examples</h3>
+
+<div class="highlight"><pre><span></span><code>      (&lt;i&gt;your_function&lt;/i&gt;) 3
+1 1 1 1 1
+1 2 2 2 1
+1 2 3 2 1
+1 2 2 2 1
+1 1 1 1 1
+
+      (&lt;i&gt;your_function&lt;/i&gt;) 5
+1 1 1 1 1 1 1 1 1
+1 2 2 2 2 2 2 2 1
+1 2 3 3 3 3 3 2 1
+1 2 3 4 4 4 3 2 1
+1 2 3 4 5 4 3 2 1
+1 2 3 4 4 4 3 2 1
+1 2 3 3 3 3 3 2 1
+1 2 2 2 2 2 2 2 1
+1 1 1 1 1 1 1 1 1
+
+      (&lt;i&gt;your_function&lt;/i&gt;) 1 ⍝ should return 1 1⍴1
+1      
+
+      (&lt;i&gt;your_function&lt;/i&gt;) 0 ⍝ should return 0 0⍴0
+</code></pre></div>
+<h2 id="2021-2-index-of-modified">2021-2: Index-Of Modified</h2>
+<p>Write a function that behaves like the APL <em>index-of</em> function <a href="https://help.dyalog.com/latest/#Language/Primitive%20Functions/Index%20Of.htm" class="language-APL" target="_blank">R←X⍳Y</a> except that it returns <span class="language-APL">0</span> instead of <span class="language-APL">1+≢X</span> for elements of <span class="language-APL">Y</span> not found in <span class="language-APL">X</span>.</p>
+<h3 id="examples">Examples</h3>
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">&#39;DYALOG&#39;</span><span class="w"> </span><span class="p">(</span><span class="nv">your_function</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;APL&#39;</span>
+<span class="m">3</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">4</span>
+
+<span class="w">      </span><span class="p">(</span><span class="m">5</span><span class="w"> </span><span class="m">5</span><span class="o">⍴</span><span class="nf">⎕A</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nv">your_function</span><span class="p">)</span><span class="w"> </span><span class="o">↑</span><span class="s1">&#39;UVWXY&#39;</span><span class="w"> </span><span class="s1">&#39;FGHIJ&#39;</span><span class="w"> </span><span class="s1">&#39;XYZZY&#39;</span>
+<span class="m">5</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">0</span>
+</code></pre></div>
+<h2 id="2021-6-fischer-random-chess">2021-6: Fischer Random Chess</h2>
+<div>
+<img src="/img/chess-board.png" style="width:250px;float:right;margin-left:20px;filter: invert(.75)hue-rotate(180deg);"/> 
+</div>
+<div><p>According to <a href="https://en.wikipedia.org/wiki/Fischer_random_chess">Wikipedia</a>, Fischer random chess is a
+      variation of the game of chess invented by former world chess champion Bobby Fischer. Fischer random chess employs
+      the same board and pieces as standard chess, but the starting position of the non-pawn pieces on the players' home ranks is
+      randomized, following certain rules. White's non-pawn pieces are placed on the first rank according to the
+      following rules:</p>
+<ul>
+      <li>The Bishops must be placed on opposite-color squares.</li>
+      <li>The King must be placed on a square between the rooks.</li>
+</ul>
+</div>
+
+<p>The good news is that you don't actually need to know anything about chess to solve this problem! We'll use strings
+      whose elements are <span class="language-APL">'KQRRBBNN'</span> for the King (♔), Queen (♕), 2 Rooks (♖), 2 Bishops (♗), and 2
+      kNights (♘) respectively.</p>
+<p>Write a function that:</p>
+<ul>
+      <li>has a character vector right argument that is a permutation of <span class="language-APL">'KQRRBBNN'</span></li>
+      <li>returns 1 if the following are true:<ul>
+                  <li>the K is between the two Rs</li>
+                  <li>the Bs occupy one odd and one even position</li>
+            </ul>otherwise a 0 is returned.</li>
+</ul>
+
+<p>💡 Hint: The <em>where</em> function <a href="https://help.dyalog.com/latest/#Language/Primitive%20Functions/Where.htm" class="language-APL" target="_blank">⍸Y</a> and the <em>residue</em> function <a href="https://help.dyalog.com/latest/#Language/Primitive%20Functions/Residue.htm" class="language-APL" target="_blank">X|Y</a> could help with solving this problem.</p>
+<h3 id="examples_1">Examples</h3>
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">your_function</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;RNBQKBNR&#39;</span><span class="w"> </span><span class="c1">⍝ standard chess layout</span>
+<span class="m">1</span>
+
+<span class="w">      </span><span class="p">(</span><span class="nv">your_function</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;BBNRKNRQ&#39;</span><span class="w"> </span><span class="c1">⍝ layout in diagram above</span>
+<span class="m">1</span>
+
+<span class="w">      </span><span class="p">(</span><span class="nv">your_function</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;RBBNQNRK&#39;</span><span class="w"> </span><span class="c1">⍝ K not between Rs</span>
+<span class="m">0</span>
+
+<span class="w">      </span><span class="p">(</span><span class="nv">your_function</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;BRBKRNQN&#39;</span><span class="w"> </span><span class="c1">⍝ Bs both in odd positions </span>
+<span class="m">0</span>
+</code></pre></div>
+<h2 id="2021-7-can-you-feel-the-magic">2021-7: Can You Feel the Magic?</h2>
+<div>
+      <img src="/img/magic-square.png" style="float:right;width:250px;margin-left:20px;" />
+</div>
+<p><a href="https://en.wikipedia.org/wiki/Magic_square">Wikipedia</a> states that, in recreational mathematics, a square array of numbers, usually positive integers, is called a magic square if the sums of the numbers in each row, each column, and both main diagonals are the same.</p>
+<p>Write a function to test whether an array is a magic square. The function must:</p>
+<ul>
+      <li>have a right argument that is a square matrix of integers (not necessarily all positive integers)</li>
+      <li>return 1 if the array represents a magic square, otherwise return 0</li>
+</ul>
+
+<p>💡 Hint: The <em>dyadic transpose</em> <a href="https://aplcart.info/?q=%E2%8D%89#" class="language-APL" target="_blank">X⍉Y</a> function could be helpful for solving this problem.</p>
+<h3 id="examples_2">Examples</h3>
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">your_function</span><span class="p">)</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="o">⍴</span><span class="m">42</span>
+<span class="m">1</span>
+
+<span class="w">      </span><span class="p">(</span><span class="nv">your_function</span><span class="p">)</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="m">4</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">6</span>
+<span class="m">1</span>
+
+<span class="w">      </span><span class="p">(</span><span class="nv">your_function</span><span class="p">)</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="o">⍴</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span>
+<span class="m">0</span>
+</code></pre></div>
+<h2 id="2021-10-on-the-right-side">2021-10: On the Right Side</h2>
+<p>Write a function that:</p>
+<ul>
+<li>has a right argument <span class="language-APL">T</span> that is a character scalar, vector or a vector of character vectors/scalars.</li>
+<li>has a left argument <span class="language-APL">W</span> that is a positive integer specifying the width of the result.</li>
+<li>returns a right-aligned character array <span class="language-APL">R</span> of shape <span class="language-APL">((2=|≡T)/≢T),W</span> meaning <span class="language-APL">R</span> is one of the following:<ul>
+<li>a <span class="language-APL">W</span>-wide vector if <span class="language-APL">T</span> is a simple vector or scalar.</li>
+<li>a <span class="language-APL">W</span>-wide matrix with the same number rows as elements of <span class="language-APL">T</span> if <span class="language-APL">T</span> is a vector of vectors/scalars.</li>
+</ul>
+</li>
+<li>if an element of <span class="language-APL">T</span> has length greater than <span class="language-APL">W</span>, truncate it after <span class="language-APL">W</span> characters.</li>
+</ul>
+<p>💡 Hint: Your solution might make use of <em>take</em>
+      <a href="https://help.dyalog.com/latest/#Language/Primitive%20Functions/Take.htm" class="language-APL" target="_blank">X ↑ Y</a>.</p>
+<h3 id="examples_3">Examples</h3>
+<p>In these examples, <span class="language-APL">⍴⎕←</span> is inserted to display first the result and then its shape.</p>
+
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="vg">⎕</span><span class="kd">←</span><span class="m">6</span><span class="w"> </span><span class="p">(</span><span class="nv">your_function</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;⍒&#39;</span>
+<span class="w">     </span><span class="o">⍒</span>
+<span class="m">6</span>
+
+<span class="w">      </span><span class="o">⍴</span><span class="vg">⎕</span><span class="kd">←</span><span class="m">8</span><span class="w"> </span><span class="p">(</span><span class="nv">your_function</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;K&#39;</span><span class="w"> </span><span class="s1">&#39;E&#39;</span><span class="w"> </span><span class="s1">&#39;Iverson&#39;</span>
+<span class="w">       </span><span class="nv">K</span>
+<span class="w">       </span><span class="nv">E</span>
+<span class="w"> </span><span class="nv">Iverson</span>
+<span class="m">3</span><span class="w"> </span><span class="m">8</span>
+
+<span class="w">      </span><span class="o">⍴</span><span class="vg">⎕</span><span class="kd">←</span><span class="m">10</span><span class="w"> </span><span class="p">(</span><span class="nv">your_function</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;Parade&#39;</span><span class="w"> </span>
+<span class="w">    </span><span class="nv">Parade</span>
+<span class="m">10</span>
+
+<span class="w">      </span><span class="o">⍴</span><span class="vg">⎕</span><span class="kd">←</span><span class="m">8</span><span class="w"> </span><span class="p">(</span><span class="nv">your_function</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;Longer Phrase&#39;</span><span class="w"> </span><span class="s1">&#39;APL&#39;</span><span class="w"> </span><span class="s1">&#39;Parade&#39;</span><span class="w"> </span>
+<span class="nv">r</span><span class="w"> </span><span class="nv">Phrase</span>
+<span class="w">     </span><span class="nv">APL</span>
+<span class="w">  </span><span class="nv">Parade</span>
+<span class="m">3</span><span class="w"> </span><span class="m">8</span>
+
+<span class="w">      </span><span class="nv">starsForSpaces</span><span class="kd">←</span><span class="s1">&#39;*&#39;</span><span class="na">@</span><span class="p">(</span><span class="o">=</span><span class="na">∘</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="w">      </span><span class="nv">starsForSpaces</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="p">(</span><span class="nv">your_function</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;⍒&#39;</span>
+<span class="o">*****⍒</span>
+</code></pre></div>
+<h2 id="2019-2-making-the-grade">2019-2: Making the Grade</h2>
+<table>
+  <tr><td style="border:none;">
+    <table>
+      <tr>
+        <td>Score Range</td><td>Letter Grade</td>
+      </tr><tr>
+        <td>0–64</td><td>F</td>
+      </tr><tr>
+        <td>65–69</td><td>D</td>
+      </tr><tr>
+        <td>70–79</td><td>C</td>
+      </tr><tr>
+        <td>80–89</td><td>B</td>
+      </tr><tr>
+        <td>90–100</td><td>A</td>    
+      </tr>
+    </table>
+  </td>
+  <td style="border: none;">
+    <p>
+Write a function that, given an array of integer test scores in the inclusive range 0–100, returns an identically-shaped array of the corresponding letter grades according to the table to the left.
+    </p>
+  </td></tr>
+</table>
+
+<p>💡 Hint: You may want to investigate the <em>interval index</em> function <a href="http://help.dyalog.com/latest/Content/Language/Primitive%20Functions/Interval%20Index.htm"><code>X⍸Y</code></a>.</p>
+<h3 id="examples_4">Examples</h3>
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">your_function</span><span class="p">)</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">64</span><span class="w"> </span><span class="m">65</span><span class="w"> </span><span class="m">69</span><span class="w"> </span><span class="m">70</span><span class="w"> </span><span class="m">79</span><span class="w"> </span><span class="m">80</span><span class="w"> </span><span class="m">89</span><span class="w"> </span><span class="m">90</span><span class="w"> </span><span class="m">100</span>
+<span class="nv">FFDDCCBBAA</span>
+
+<span class="w">      </span><span class="p">(</span><span class="nv">your_function</span><span class="p">)</span><span class="w"> </span><span class="no">⍬</span><span class="w">  </span><span class="c1">⍝ returns an empty vector</span>
+
+
+<span class="w">      </span><span class="p">(</span><span class="nv">your_function</span><span class="p">)</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="m">71</span><span class="w"> </span><span class="m">82</span><span class="w"> </span><span class="m">81</span><span class="w"> </span><span class="m">82</span><span class="w"> </span><span class="m">84</span><span class="w"> </span><span class="m">59</span>
+<span class="nv">CBB</span>
+<span class="nv">BBF</span>
+</code></pre></div>
+<h2 id="2019-5-doubling-up">2019-5: Doubling Up</h2>
+<p>Given a word or a list of words, return a Boolean vector where <code>1</code> indicates a word with one or more consecutive duplicated, case-sensitive, letters. Each word will have at least one letter and will consist entirely of either uppercase (A–Z) or lowercase (a–z) letters. Words consisting of a single letter can be scalars.</p>
+<p>💡 Hint: The nest function <a href="http://help.dyalog.com/latest/Content/Language/Primitive%20Functions/Nest.htm"><code>⊆Y</code></a> could be useful.</p>
+<h3 id="examples_5">Examples</h3>
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">your_function</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;I&#39;</span><span class="w"> </span><span class="s1">&#39;feed&#39;</span><span class="w"> </span><span class="s1">&#39;the&#39;</span><span class="w"> </span><span class="s1">&#39;bookkeeper&#39;</span>
+<span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span>
+<span class="w">      </span><span class="p">(</span><span class="nv">your_function</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;I&#39;</span>
+<span class="m">0</span>
+<span class="w">      </span><span class="p">(</span><span class="nv">your_function</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;feed&#39;</span>
+<span class="m">1</span>
+<span class="w">      </span><span class="p">(</span><span class="nv">your_function</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;MY&#39;</span><span class="w"> </span><span class="s1">&#39;LLAMAS&#39;</span><span class="w"> </span><span class="s1">&#39;HAVE&#39;</span><span class="w"> </span><span class="s1">&#39;BEEN&#39;</span><span class="w"> </span><span class="s1">&#39;GOOD&#39;</span>
+<span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>
+</code></pre></div>
+<h2 id="2019-6-telephone-names">2019-6: Telephone Names</h2>
+<table>
+  <tr><td style="border: none;" markdown="1">
+<table class="telephone">
+    <tbody><tr>
+        <td><ruby>1<rt></rt></ruby></td>
+        <td><ruby>2<rt>ABC</rt></ruby></td>
+        <td><ruby>3<rt>DEF</rt></ruby></td>
+    </tr>
+    <tr>
+        <td><ruby>4<rt>GHI</rt></ruby></td>
+        <td><ruby>5<rt>JKL</rt></ruby></td>
+        <td><ruby>6<rt>MNO</rt></ruby></td>
+    </tr>
+    <tr>
+        <td><ruby>7<rt>PQRS</rt></ruby></td>
+        <td><ruby>8<rt>TUV</rt></ruby></td>
+        <td><ruby>9<rt>WXYZ</rt></ruby></td>
+    </tr>
+    <tr>
+        <td><ruby>*<rt></rt></ruby></td>
+        <td><ruby>0<rt></rt></ruby></td>
+        <td><ruby>#<rt></rt></ruby></td>
+    </tr>
+</tbody></table> 
+  </td><td style="border: none;">
+Some telephone keypads have letters of the alphabet embossed on their keytops. Some people like to remember phone numbers by converting them to an alphanumeric form using one of the letters on the corresponding key. For example, in the keypad shown, <code>'ALSMITH'</code> would correspond to the number 257-6484 and <code>'1DYALOGBEST'</code> would correspond to 1-392-564-2378.
+  </td></tr>
+</table>
+<p>Write an APL function that takes a character vector right argument that consists of digits and uppercase letters and returns an integer vector of the corresponding digits on the keypad.</p>
+<p>💡 Hint: Your solution might make use of the membership function <a href="http://help.dyalog.com/latest/Content/Language/Primitive%20Functions/Membership.htm"><code>X∊Y</code></a>.</p>
+<h3 id="examples_6">Examples</h3>
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">your_function</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;IAMYY4U&#39;</span>
+<span class="m">4</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">8</span>
+<span class="w">      </span><span class="p">(</span><span class="nv">your_function</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w">   </span><span class="c1">⍝ should return an empty vector</span>
+
+<span class="w">      </span><span class="p">(</span><span class="nv">your_function</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;UR2CUTE&#39;</span>
+<span class="m">8</span><span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="m">3</span>
+</code></pre></div>
+<h2 id="2018-3-rolling-along">2018-3: Rolling Along</h2>
+<p>Using the key operator <a href="http://help.dyalog.com/latest/#Language/Primitive%20Operators/Key.htm"><code>⌸</code></a>, write an APL expression that, given an integer scalar or vector representing the number of sides on each of a set of dice, will return a histogram showing the distribution curve for the possible totals that can be rolled using those dice. The histogram is a 2-column matrix where the left column contains the possible totals for the dice, and the right column has vectors containing asterisks representing the number of occurrences of the corresponding totals.  Trailing spaces are allowed in the character vectors.</p>
+<p>Note: If you have <code>]boxing on</code> then the result will look different.</p>
+<h3 id="examples_7">Examples:</h3>
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">your_function</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">6</span><span class="w">   </span><span class="c1">⍝ 2 6-sided dice</span>
+<span class="w"> </span><span class="m">2</span><span class="w">  </span><span class="o">*</span><span class="w">     </span>
+<span class="w"> </span><span class="m">3</span><span class="w">  </span><span class="o">**</span><span class="w">      </span>
+<span class="w"> </span><span class="m">4</span><span class="w">  </span><span class="o">***</span><span class="w">    </span>
+<span class="w"> </span><span class="m">5</span><span class="w">  </span><span class="o">****</span><span class="w">      </span>
+<span class="w"> </span><span class="m">6</span><span class="w">  </span><span class="o">*****</span><span class="w">   </span>
+<span class="w"> </span><span class="m">7</span><span class="w">  </span><span class="o">******</span><span class="w"> </span>
+<span class="w"> </span><span class="m">8</span><span class="w">  </span><span class="o">*****</span><span class="w">   </span>
+<span class="w"> </span><span class="m">9</span><span class="w">  </span><span class="o">****</span><span class="w">      </span>
+<span class="m">10</span><span class="w">  </span><span class="o">***</span><span class="w">    </span>
+<span class="m">11</span><span class="w">  </span><span class="o">**</span>
+<span class="m">12</span><span class="w">  </span><span class="o">*</span>
+<span class="w">      </span><span class="nv">your_function</span><span class="w"> </span><span class="m">6</span><span class="w">  </span><span class="c1">⍝ 1 6-sided die (flat distribution)</span>
+<span class="m">1</span><span class="w">  </span><span class="o">*</span><span class="w">  </span>
+<span class="m">2</span><span class="w">  </span><span class="o">*</span><span class="w">  </span>
+<span class="m">3</span><span class="w">  </span><span class="o">*</span><span class="w">  </span>
+<span class="m">4</span><span class="w">  </span><span class="o">*</span><span class="w">  </span>
+<span class="m">5</span><span class="w">  </span><span class="o">*</span><span class="w">  </span>
+<span class="m">6</span><span class="w">  </span><span class="o">*</span><span class="w"> </span>
+<span class="w">      </span><span class="nv">your_function</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="c1">⍝ 5, 3, and 4-sided dice</span>
+<span class="w"> </span><span class="m">3</span><span class="w">  </span><span class="o">*</span><span class="w">            </span>
+<span class="w"> </span><span class="m">4</span><span class="w">  </span><span class="o">***</span><span class="w">          </span>
+<span class="w"> </span><span class="m">5</span><span class="w">  </span><span class="o">******</span>
+<span class="w"> </span><span class="m">6</span><span class="w">  </span><span class="o">*********</span><span class="w">     </span>
+<span class="w"> </span><span class="m">7</span><span class="w">  </span><span class="o">***********</span><span class="w">  </span>
+<span class="w"> </span><span class="m">8</span><span class="w">  </span><span class="o">***********</span><span class="w">  </span>
+<span class="w"> </span><span class="m">9</span><span class="w">  </span><span class="o">*********</span><span class="w">    </span>
+<span class="m">10</span><span class="w">  </span><span class="o">******</span>
+<span class="m">11</span><span class="w">  </span><span class="o">***</span><span class="w">          </span>
+<span class="m">12</span><span class="w">  </span><span class="o">*</span>
+<span class="w">      </span><span class="nv">your_function</span><span class="w"> </span><span class="no">⍬</span><span class="w"> </span><span class="c1">⍝ no dice</span>
+<span class="m">0</span><span class="w">  </span><span class="o">*</span><span class="w">   </span>
+</code></pre></div>
+<h2 id="2018-4-whats-your-sign">2018-4: What's Your Sign?</h2>
+<p>The Chinese animal zodiac is a repeating cycle of 12 years, with each year being represented by an animal. 2018 is the year of the dog. The signs for the last 12 years are:</p>
+<div>
+<table>
+<thead>
+<tr>
+<th>2018</th>
+<th>Dog</th>
+<th></th>
+<th>2012</th>
+<th>Dragon</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2017</td>
+<td>Rooster</td>
+<td></td>
+<td>2011</td>
+<td>Rabbit</td>
+</tr>
+<tr>
+<td>2016</td>
+<td>Monkey</td>
+<td></td>
+<td>2010</td>
+<td>Tiger</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>Goat</td>
+<td></td>
+<td>2009</td>
+<td>Ox</td>
+</tr>
+<tr>
+<td>2014</td>
+<td>Horse</td>
+<td></td>
+<td>2008</td>
+<td>Rat</td>
+</tr>
+<tr>
+<td>2013</td>
+<td>Snake</td>
+<td></td>
+<td>2007</td>
+<td>Pig</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Note that the year 1 AD (represented as <code>1</code>) follows the year 1 BC (represented as <code>¯1</code>) with no intervening "0" year. </p>
+<p>Write an APL expression that, given a scalar integer year, returns a character vector (string) of the Chinese zodiac sign for that year.  For the purposes of this problem, assume that each year number corresponds to exactly one Chinese zodiac animal.</p>
+<h3 id="examples_8">Examples:</h3>
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">your_function</span><span class="w"> </span><span class="m">2018</span><span class="w">  </span><span class="c1">⍝ Newborns this year will be Dogs</span>
+<span class="nv">Dog</span>
+<span class="w">      </span><span class="nv">your_function</span><span class="w"> </span><span class="m">1564</span><span class="w">  </span><span class="c1">⍝ William Shakespeare b. 1564</span>
+<span class="nv">Rat</span>
+<span class="w">      </span><span class="nv">your_function</span><span class="w"> </span><span class="m">¯551</span><span class="w">  </span><span class="c1">⍝ Confucius b. 551 BC</span>
+<span class="nv">Dog</span>
+</code></pre></div>
+<h2 id="2018-5-whats-your-sign-revisited">2018-5: What's Your Sign? Revisited</h2>
+<p>In Western astrology, the Zodiac is based on twelve 30° sectors of the ecliptic. Although the exact dates in a given year may shift by a day, the general dates for each sign are:</p>
+<table>
+<thead>
+<tr>
+<th>Aries</th>
+<th>March 21–April 19</th>
+<th>Libra</th>
+<th>September 23–October 22</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Taurus</td>
+<td>April 20–May 20</td>
+<td>Scorpio</td>
+<td>October 23–November 21</td>
+</tr>
+<tr>
+<td>Gemini</td>
+<td>May 21–June 20</td>
+<td>Sagittarius</td>
+<td>November 22–December 21</td>
+</tr>
+<tr>
+<td>Cancer</td>
+<td>June 21–July 22</td>
+<td>Capricorn</td>
+<td>December 22–January 19</td>
+</tr>
+<tr>
+<td>Leo</td>
+<td>July 23–August 22</td>
+<td>Aquarius</td>
+<td>January 20–February 18</td>
+</tr>
+<tr>
+<td>Virgo</td>
+<td>August 23–September 22</td>
+<td>Pisces</td>
+<td>February 19–March 20</td>
+</tr>
+</tbody>
+</table>
+<p>Write an APL expression that, given a 2-element integer vector representing month and day, returns a character vector (string) of the corresponding Western zodiac sign.</p>
+<h3 id="examples_9">Examples:</h3>
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">your_function</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">23</span><span class="w">    </span><span class="c1">⍝ February 23</span>
+<span class="nv">Pisces</span>
+<span class="w">      </span><span class="nv">your_function</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">31</span><span class="w">   </span><span class="c1">⍝ October 31</span>
+<span class="nv">Scorpio</span>
+</code></pre></div>
+<h2 id="2018-10-anagrammatically-correct">2018-10: Anagrammatically Correct</h2>
+<p>An anagram is a word or phrase that can be formed by rearranging the letters of another. For instance, 'stained' and 'instead' are anagrams, as are 'emigrants' and 'streaming'. Spaces are not considered significant in the comparison. </p>
+<p>Write an APL expression that takes left and right arguments of character scalars or vectors returns a <code>1</code> if the arguments are anagrams of one another, <code>0</code> otherwise. You may assume that both arguments are both either upper-case or lower-case.</p>
+<h3 id="examples_10">Examples:</h3>
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">&#39;ALBERT EINSTEIN&#39;</span><span class="w"> </span><span class="nv">your_function</span><span class="w"> </span><span class="s1">&#39;TEN ELITE BRAINS&#39;</span>
+<span class="m">1</span>
+<span class="w">      </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="nv">your_function</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span>
+<span class="m">1</span>
+<span class="w">      </span><span class="s1">&#39;d&#39;</span><span class="w"> </span><span class="nv">your_function</span><span class="w"> </span><span class="s1">&#39;d&#39;</span>
+<span class="m">1</span>
+<span class="w">      </span><span class="s1">&#39;mesas&#39;</span><span class="w"> </span><span class="nv">your_function</span><span class="w"> </span><span class="s1">&#39;seam&#39;</span>
+<span class="m">0</span>
+<span class="w">      </span><span class="s1">&#39;apple&#39;</span><span class="w"> </span><span class="nv">your_function</span><span class="w"> </span><span class="s1">&#39;lapel&#39;</span>
+<span class="m">0</span>
+</code></pre></div>
+<h2 id="2016-4-just-meshing-around">2016-4: Just Meshing Around</h2>
+<p>Write a function that takes vectors as its left and right arguments and returns them "meshed" into a single vector formed by alternately taking successive elements from each argument. The arguments do not have to be the same length. </p>
+<h3 id="examples_11">Examples:</h3>
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">&#39;MENS&#39;</span><span class="w"> </span><span class="nv">your_function</span><span class="w"> </span><span class="s1">&#39;EKES&#39;</span><span class="w"> </span>
+<span class="nv">MEEKNESS</span>
+<span class="w">      </span><span class="s1">&#39;Dyalog&#39;</span><span class="w"> </span><span class="nv">your_function</span><span class="w"> </span><span class="s1">&#39;APL&#39;</span><span class="w">   </span>
+<span class="nv">DAyPaLlog</span>
+<span class="w">      </span><span class="s1">&#39;APL&#39;</span><span class="w"> </span><span class="nv">your_function</span><span class="w"> </span><span class="s1">&#39;Dyalog&#39;</span><span class="w"> </span>
+<span class="nv">ADPyLalog</span>
+<span class="w">       </span><span class="m">1</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="nv">your_function</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">8</span><span class="w">   </span><span class="c1">⍝ should work with numeric vectors </span>
+<span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="m">8</span>
+<span class="w">       </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="nv">your_function</span><span class="w"> </span><span class="s1">&#39;Hello&#39;</span><span class="w">  </span><span class="c1">⍝ either or both arguments could be empty</span>
+<span class="nv">Hello</span>
+</code></pre></div>
+<h2 id="2016-6-shorter-ones-to-the-front">2016-6: Shorter Ones to the Front</h2>
+<p>Write a function that takes a vector of vectors as its right argument and returns it sorted by the length of each element. An element of the vector can be scalar or an empty vector. </p>
+<h3 id="examples_12">Examples:</h3>
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">your_function</span><span class="w"> </span><span class="s1">&#39;one&#39;</span><span class="w"> </span><span class="s1">&#39;two&#39;</span><span class="w"> </span><span class="s1">&#39;three&#39;</span><span class="w"> </span><span class="s1">&#39;four&#39;</span><span class="w"> </span><span class="s1">&#39;five&#39;</span><span class="w"> </span><span class="s1">&#39;six&#39;</span>
+<span class="err">┌───┬───┬───┬────┬────┬─────┐</span>
+<span class="err">│</span><span class="nv">one</span><span class="err">│</span><span class="nv">two</span><span class="err">│</span><span class="nv">six</span><span class="err">│</span><span class="nv">four</span><span class="err">│</span><span class="nv">five</span><span class="err">│</span><span class="nv">three</span><span class="err">│</span>
+<span class="err">└───┴───┴───┴────┴────┴─────┘</span>
+<span class="w">      </span><span class="nv">your_function</span><span class="w"> </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="p">(</span><span class="m">7</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
+<span class="err">┌─┬───┬───┬─────┐</span>
+<span class="err">│</span><span class="m">1</span><span class="err">│</span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="err">│</span><span class="m">7</span><span class="w"> </span><span class="m">3</span><span class="err">│</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">3</span><span class="err">│</span>
+<span class="err">└─┴───┴───┴─────┘</span>
+<span class="w">      </span><span class="nv">your_function</span><span class="w"> </span><span class="no">⍬</span><span class="w">   </span><span class="c1">⍝ should return an empty vector      </span>
+
+<span class="w">      </span><span class="nv">your_function</span><span class="w"> </span><span class="s1">&#39;one&#39;</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="s1">&#39;three&#39;</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="s1">&#39;four&#39;</span><span class="w"> </span><span class="p">(</span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="m">8</span><span class="p">)</span>
+<span class="err">┌┬─┬───┬────┬───────┬─────┐</span>
+<span class="err">││</span><span class="m">2</span><span class="err">│</span><span class="nv">one</span><span class="err">│</span><span class="nv">four</span><span class="err">│</span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="m">8</span><span class="err">│</span><span class="nv">three</span><span class="err">│</span>
+<span class="err">└┴─┴───┴────┴───────┴─────┘</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog, LTD</a></strong>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../js/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
