@@ -402,6 +402,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#indian-summer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indian Summer
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -471,6 +480,15 @@
   <a href="#can-we-fix-it" class="md-nav__link">
     <span class="md-ellipsis">
       Can We Fix It?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indian-summer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indian Summer
     </span>
   </a>
   
@@ -621,9 +639,48 @@ Hex[2] bytes←&#39;UTF-8&#39;∘⎕UCS¨⊃⎕NGET file 1
 <p>Add the new reporting functionality to your fixed version of the app.</p>
 </li>
 <li>
-<p><strong>BONUS:</strong> Rewrite the app to use <code>:Trap</code> instead of <code>⎕TRAP</code></p>
+<p>Rewrite the app to use <code>:Trap</code> instead of <code>⎕TRAP</code></p>
 </li>
 </ol>
+</li>
+</ol>
+<h2 id="indian-summer">Indian Summer</h2>
+<p><a href="../assets/IndiaRainfall.csv">IndiaRainfall.csv</a> is a file of <a href="https://simple.wikipedia.org/wiki/Comma-separated_values">comma separated values</a>. It is adapted from <a href="../assets/IndiaRainfallSource.csv">IndiaRainfallSource.csv</a> to remove incomplete records.</p>
+<p>The <a href="http://www.imd.gov.in/">India Meteorological Department(IMD)</a> has shared this dataset under <a href="https://data.gov.in/government-open-data-license-india">Govt. Open Data License - India</a>. It can be downloaded from the links above or from <a href="https://www.kaggle.com/rajanand/rainfall-in-india">the Kaggle data science website</a>.</p>
+<p>The data contains the total measured monthly rain fall in millimeters for <code>30</code> regions in India from the years <code>1915</code> to <code>2015</code> inclusive.</p>
+<ol>
+<li>
+<p>Load the data into the workspace</p>
+<details class="hint">
+<summary>Hint</summary>
+<p>Press <kbd>F1</kbd> or use the <code>]Help</code> user command to view the documentation for <code>⎕CSV</code>.</p>
+</details>
+<div class="admonition hint">
+<p class="admonition-title">Bonus</p>
+<p>Try reading <strong>IndiaRainfallSource.csv</strong> and removing the missing records for yourself. When data sets contain a very small amount of missing data, sometimes it is appropriate to estimate those values in a process called <a href="https://en.wikipedia.org/wiki/Imputation_%28statistics%29">imputation</a>. Often, it is best to just remove the records with missing fields.</p>
+</div>
+</li>
+<li>
+<p>What was the total rainfall in Punjab in 1995?</p>
+</li>
+<li>Which month in which region had the highest rainfall in 1995?</li>
+<li>
+<p>Use a least squares linear fit to estimate the total rainfall in all 30 regions in 1905</p>
+<details class="hint">
+<summary>Hint</summary>
+<p>No one would expect you to derive an expression for the least squares linear fit. If you have done it, kudos to you. The expression <code>Mv(⊢⌹1,∘⍪⊣)Nv</code> from <a href="https://aplcart.info/?q=linear%20regression#">APLcart</a> will compute coefficients of a least squares linear fit given a vector of X values <code>Mv</code> and a vector of Y values <code>Nv</code>.</p>
+</details>
+</li>
+<li>
+<p>Inspect the data in <strong>IndiaRainfallSource.csv</strong> to see how close the true values were to your estimates. What was the standard error?</p>
+<details class="hint">
+<summary>Hint</summary>
+<p>If the error <code>e</code> is a vector of the differences between Y values predicted by the linear fit and the actual Y values</p>
+<div class="arithmatex">\[e_i=Y_i^{\text{predicted}}-Y_i^{\text{actual}}\]</div>
+<p>then an estimate for the variance is given by</p>
+<div class="arithmatex">\[s^2=\sum_{i=1}^n{{e_i^2}\over{n-2}}\]</div>
+<p>where the standard deviation (standard error) is <span class="arithmatex">\(s\)</span>.</p>
+</details>
 </li>
 </ol>
 
