@@ -146,6 +146,20 @@
 	0 1 1 1 0
 	```
 
+1. These are the heights of some students in 3 classes.
+	```APL
+	student ← 10 7⍴'Kane   Jonah  JessicaPadma  Katie  CharlieAmil   David  Zara   Filipa '
+	class ← 'CBACCCBBAB'
+	height ← 167 177 171 176 178 164 177 177 173 160
+	```
+
+	Use APL to:
+
+	1. Find the height of the tallest student
+	1. Find the name of the tallest student
+	1. Find the class to which the tallest student belongs  
+	1. Find the average height of students in class `B`
+
 1. Anna, Ben and Charlie are having a competition. They want to see who can eat the most fruit in a week.
 
 	```APL
@@ -158,7 +172,7 @@
 	???+Question "What is `⎕RL`?"
 		The <dfn>roll</dfn> function `?⍵` generates random numbers for each simple scalar number in `⍵`.
 
-		Setting the <dfn>Random Link</dfn> [system variable](./Quad%20names.md#system-variables) `⎕RL` lets us generate the same random numbers repeatedly.
+		Setting the <dfn>Random Link</dfn> system variable `⎕RL` lets us generate the same random numbers repeatedly.
 
 	1. Compute the names of the people who ate the most fruit on Tuesday and Sunday combined.
 	1. Compute the name of the person who ate the most mangoes and bananas combined.
