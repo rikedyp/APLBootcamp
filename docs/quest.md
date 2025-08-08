@@ -1,22 +1,8 @@
 # Quest Problems
 
-## 4: How Tweet It Is
-Twitter messages have a 140 character limit; what if the limit was even shorter? One way to shorten the message yet retain most readability is to remove interior vowels from its words. Write a dfn which takes a character vector and removes the interior vowels from each word.
+These are selected problems from the [APL Quest](https://apl.quest) that exercise concepts especially important for beginners and used by APL practitioners in almost all domains.
 
-<h4>Examples</h4>
-```APL
-      (your_function) 'if you can read this, it worked!'
-if yu cn rd ths, it wrkd!
-      (your_function) 'APL is REALLY cool'
-APL is RLLY cl
-      (your_function) '' ⍝ an empty vector arg should return an empty vector
-
-      (your_function) 'a' ⍝ should work with a single character message
-a
-```
-
-
-## 2: Put It In Reverse
+## 2013-2: Put It In Reverse
 
 <p>The <em>find</em> function <a href="https://help.dyalog.com/latest/#Language/Primitive%20Functions/Find.htm" class="APL" target="_blank">X⍷Y</a> identifies the beginnings of occurrences of array <span class="APL">X</span> in array <span class="APL">Y</span>.</p>
 <p>In this problem, you're asked to return a result that identifies the endings of occurrences of array <span class="APL">X</span> in array <span class="APL">Y</span>. To keep things simple, <span class="APL">X</span> and <span class="APL">Y</span> will be at most rank 1, meaning they'll either be vectors or scalars.</p>
@@ -29,7 +15,8 @@ a
 <p><i class="fas fa-lightbulb-on"></i> <strong>Hint:</strong> The <em>find</em> function <a href="https://help.dyalog.com/latest/#Language/Primitive%20Functions/Find.htm" class="APL" target="_blank">⍷</a> and <em>reverse</em> function <a href="https://help.dyalog.com/latest/#Language/Primitive%20Functions/Reverse.htm" class="APL" target="_blank">⌽</a> could be helpful in solving this problem.</p>
 <hr />
 <h5>Examples</h5>
-<pre class="APL">
+
+```
       'abra' (<i>your_function</i>) 'abracadabra'
 0 0 0 1 0 0 0 0 0 0 1
 
@@ -38,7 +25,7 @@ a
 
       'bb' (<i>your_function</i>) 'bbb bbb'
 0 1 1 0 0 1 1
-</pre><pre class="APL">
+
       (,42) (<i>your_function</i>) 42
 0
 
@@ -47,12 +34,28 @@ a
 
       (,42) (<i>your_function</i>) ,42
 1
-</pre><pre class="APL">
+
       'are' 'aquatic' (<i>your_function</i>) 'ducks' 'are' 'aquatic' 'avians' 
 0 0 1 0
-</pre>
+```
 
-## 6: Key/Value Pairs
+## 2014-2: How Tweet It Is
+Twitter messages have a 140 character limit; what if the limit was even shorter? One way to shorten the message yet retain most readability is to remove interior vowels from its words. Write a dfn which takes a character vector and removes the interior vowels from each word.
+
+<h4>Examples</h4>
+
+```APL
+      (your_function) 'if you can read this, it worked!'
+if yu cn rd ths, it wrkd!
+      (your_function) 'APL is REALLY cool'
+APL is RLLY cl
+      (your_function) '' ⍝ an empty vector arg should return an empty vector
+
+      (your_function) 'a' ⍝ should work with a single character message
+a
+```
+
+## 2023-6: Key/Value Pairs
 
 <p>Representing data as key/value pairs (also known as name/value pairs) is a very common technique. For example, it can be found in query strings in HTTP URIs, attribute settings in HTML elements, and in JSON objects. One common representation for a key/value pair is to have a character key (name) followed by an equals sign (=) followed by the value. Multiple key/value pairs can be separated by a delimiter character or characters. For example:</p>
 <pre class="APL">
@@ -69,7 +72,8 @@ a
 <p><i class="fas fa-lightbulb-on"></i> <strong>Hint:</strong> The <em>partition</em> function <a href="https://help.dyalog.com/latest/#Language/Primitive%20Functions/Partition.htm" class="APL" target="_blank">⊆</a> could be helpful in solving this problem.</p>
 <hr>
 <h5>Examples</h5>
-<pre class="APL">      
+
+```
       ⍴ ⎕← ' ='(<i>your_function</i>)'language=APL dialect=Dyalog' 
 ┌────────┬──────┐
 │language│APL   │
@@ -93,13 +97,9 @@ a
 │name│Adám  │
 └────┴──────┘
 3 2
-</pre>
+```
 
-
-
-
-
-## 6: Pyramid Scheme
+## 2022-6: Pyramid Scheme
 
 <p>Write a monadic function that:</p>
 <ul>
@@ -112,7 +112,8 @@ a
       class="APL" target="_blank">X∘.gY</a> could be helpful.</p>
 <hr/>
 <h3>Examples</h3>
-<pre class="APL">
+
+```
       (<i>your_function</i>) 3
 1 1 1 1 1
 1 2 2 2 1
@@ -136,9 +137,9 @@ a
 
       (<i>your_function</i>) 0 ⍝ should return 0 0⍴0
 
-</pre>
+```
 
-## 2: Index-Of Modified
+## 2021-2: Index-Of Modified
 Write a function that behaves like the APL <em>index-of</em> function <a href="https://help.dyalog.com/latest/#Language/Primitive%20Functions/Index%20Of.htm" class="language-APL" target="_blank">R←X⍳Y</a> except that it returns <span class="language-APL">0</span> instead of <span class="language-APL">1+≢X</span> for elements of <span class="language-APL">Y</span> not found in <span class="language-APL">X</span>.
 
 ### Examples
@@ -151,10 +152,10 @@ Write a function that behaves like the APL <em>index-of</em> function <a href="h
 ```
 
 
-## 6: Fischer Random Chess
+## 2021-6: Fischer Random Chess
 
 <div>
-<img src="/img/board.png" style="width:250px;float:right;margin-left:20px;filter: invert(.75)hue-rotate(180deg);"/> 
+<img src="/img/chess-board.png" style="width:250px;float:right;margin-left:20px;filter: invert(.75)hue-rotate(180deg);"/> 
 </div>
 <div><p>According to <a href="https://en.wikipedia.org/wiki/Fischer_random_chess">Wikipedia</a>, Fischer random chess is a
       variation of the game of chess invented by former world chess champion Bobby Fischer. Fischer random chess employs
@@ -200,7 +201,7 @@ Write a function that behaves like the APL <em>index-of</em> function <a href="h
 0
 ```
 
-## 7: Can You Feel the Magic?
+## 2021-7: Can You Feel the Magic?
 
 <div>
       <img src="/img/magic-square.png" style="float:right;width:250px;margin-left:20px;" />
@@ -227,7 +228,7 @@ Write a function that behaves like the APL <em>index-of</em> function <a href="h
 0
 ```
 
-## 10: On the Right Side
+## 2021-10: On the Right Side
 
 <p>Write a function that:</p>
 - has a right argument <span class="language-APL">T</span> that is a character scalar, vector or a vector of character vectors/scalars.
@@ -272,7 +273,7 @@ r Phrase
   
 ```
 
-## 2: Making the Grade
+## 2019-2: Making the Grade
 <table>
   <tr><td style="border:none;">
     <table>
@@ -314,7 +315,7 @@ CBB
 BBF
 ```
 
-## 5: Doubling Up
+## 2019-5: Doubling Up
 
 Given a word or a list of words, return a Boolean vector where `1` indicates a word with one or more consecutive duplicated, case-sensitive, letters. Each word will have at least one letter and will consist entirely of either uppercase (A–Z) or lowercase (a–z) letters. Words consisting of a single letter can be scalars.
 
@@ -333,7 +334,7 @@ Given a word or a list of words, return a Boolean vector where `1` indicates a w
 0 1 0 1 1 
 ```
 
-## 6: Telephone Names
+## 2019-6: Telephone Names
 
 <table>
   <tr><td style="border: none;" markdown="1">
@@ -378,7 +379,7 @@ Write an APL function that takes a character vector right argument that consists
 8 7 2 2 8 8 3
 ```
 
-## 3: Rolling Along
+## 2018-3: Rolling Along
 
 Using the key operator [`⌸`](http://help.dyalog.com/latest/#Language/Primitive%20Operators/Key.htm), write an APL expression that, given an integer scalar or vector representing the number of sides on each of a set of dice, will return a histogram showing the distribution curve for the possible totals that can be rolled using those dice. The histogram is a 2-column matrix where the left column contains the possible totals for the dice, and the right column has vectors containing asterisks representing the number of occurrences of the corresponding totals.  Trailing spaces are allowed in the character vectors.
 
@@ -421,7 +422,7 @@ Note: If you have `]boxing on` then the result will look different.
 0  *   
 ```
 
-## 4: What's Your Sign?
+## 2018-4: What's Your Sign?
 
 The Chinese animal zodiac is a repeating cycle of 12 years, with each year being represented by an animal. 2018 is the year of the dog. The signs for the last 12 years are:
 
@@ -452,7 +453,7 @@ Rat
 Dog
 ```
 
-## 5: What's Your Sign? Revisited
+## 2018-5: What's Your Sign? Revisited
 
 In Western astrology, the Zodiac is based on twelve 30° sectors of the ecliptic. Although the exact dates in a given year may shift by a day, the general dates for each sign are:
 
@@ -475,7 +476,7 @@ Pisces
 Scorpio
 ```
 
-## 10: Anagrammatically Correct
+## 2018-10: Anagrammatically Correct
 
 An anagram is a word or phrase that can be formed by rearranging the letters of another. For instance, 'stained' and 'instead' are anagrams, as are 'emigrants' and 'streaming'. Spaces are not considered significant in the comparison. 
 
@@ -496,7 +497,7 @@ Write an APL expression that takes left and right arguments of character scalars
 0
 ```
 
-## 4: Just Meshing Around
+## 2016-4: Just Meshing Around
 Write a function that takes vectors as its left and right arguments and returns them "meshed" into a single vector formed by alternately taking successive elements from each argument. The arguments do not have to be the same length. 
 
 ### Examples:
@@ -514,7 +515,7 @@ ADPyLalog
 Hello
 ```
 
-## 6: Shorter Ones to the Front
+## 2016-6: Shorter Ones to the Front
 Write a function that takes a vector of vectors as its right argument and returns it sorted by the length of each element. An element of the vector can be scalar or an empty vector. 
 
 ### Examples:
