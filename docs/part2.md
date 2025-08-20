@@ -2,9 +2,10 @@
 
 ## Spot the Difference
 In each of the following scenarios, think:
+
 - What output was intended?
-- Why doesn't the written expression product the intended output?
-- What would you change to fix the expression?
+- Why doesn't the written expression produce the intended output?
+- What could you change to fix the expression?
 
 1. I have 100 sweets in a bowl. I give 10 to James, 13 to Vela, 11 to Malai and 14 to Alex. 31 fall
 on the floor and the bowl breaks. How many do I have left?
