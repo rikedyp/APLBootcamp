@@ -617,7 +617,10 @@
 </code></pre></div>
 </li>
 <li>
-<p>Bus stops in a town are labelled <strong>A</strong> to <strong>E</strong>. Define a function RouteMatrix which returns a Boolean matrix where <code>1</code>s indicate that buses go from one bus stop to the next.</p>
+<p>Bus stops in a town are labelled <strong>A</strong> to <strong>E</strong>.</p>
+<p>We can define a graph using a nested list of character arrays. For each position in our graph, we say which bus stops are reachable directly from this stop.</p>
+<p>For example, <code>('BE' 'C' 'AE' 'BCE' 'A')</code> means that there is a bus that goes from stop <strong>A</strong> to stops <strong>B</strong> and <strong>E</strong>, from stop <strong>B</strong> to stop <strong>C</strong>, from <strong>C</strong> to <strong>A</strong> and <strong>E</strong>, etc.</p>
+<p>Define a function RouteMatrix which returns a Boolean matrix where <code>1</code>s indicate that buses go from the stop indicated by the column position to stops indicated by row positions.</p>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">RouteMatrix</span><span class="w"> </span><span class="s1">&#39;BE&#39;</span><span class="w"> </span><span class="s1">&#39;C&#39;</span><span class="w"> </span><span class="s1">&#39;AE&#39;</span><span class="w"> </span><span class="s1">&#39;BCE&#39;</span><span class="w"> </span><span class="s1">&#39;A&#39;</span>
 <span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span>
 <span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span>
@@ -625,13 +628,13 @@
 <span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
 <span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span>
 
-<span class="w">      </span><span class="s1">&#39;ABCDE&#39;</span><span class="o">⍪</span><span class="nv">RouteMatrix</span><span class="w"> </span><span class="s1">&#39;C&#39;</span><span class="w"> </span><span class="s1">&#39;CDE&#39;</span><span class="w"> </span><span class="s1">&#39;ABDE&#39;</span><span class="w"> </span><span class="s1">&#39;E&#39;</span><span class="w"> </span><span class="s1">&#39;B&#39;</span>
-<span class="nv">A</span><span class="w"> </span><span class="nv">B</span><span class="w"> </span><span class="nv">C</span><span class="w"> </span><span class="nv">D</span><span class="w"> </span><span class="nv">E</span>
-<span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
-<span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span>
-<span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
-<span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
-<span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span>
+<span class="w">      </span><span class="s1">&#39; ABCDE&#39;</span><span class="o">,</span><span class="s1">&#39;ABCDE&#39;</span><span class="o">⍪</span><span class="nv">RouteMatrix</span><span class="w"> </span><span class="s1">&#39;C&#39;</span><span class="w"> </span><span class="s1">&#39;CDE&#39;</span><span class="w"> </span><span class="s1">&#39;ABDE&#39;</span><span class="w"> </span><span class="s1">&#39;E&#39;</span><span class="w"> </span><span class="s1">&#39;B&#39;</span>
+<span class="w">  </span><span class="nv">A</span><span class="w"> </span><span class="nv">B</span><span class="w"> </span><span class="nv">C</span><span class="w"> </span><span class="nv">D</span><span class="w"> </span><span class="nv">E</span>
+<span class="nv">A</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
+<span class="nv">B</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span>
+<span class="nv">C</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
+<span class="nv">D</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
+<span class="nv">E</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 </li>
 <li>

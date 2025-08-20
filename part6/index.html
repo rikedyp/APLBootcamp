@@ -515,8 +515,10 @@
 <h1 id="part-6">Part 6</h1>
 <p>Error handling and debugging</p>
 <h2 id="an-honest-mistake">An Honest Mistake</h2>
-<div class="highlight"><pre><span></span><code><span class="nv">r</span><span class="kd">←</span><span class="nv">Anagram</span><span class="w"> </span><span class="nv">b</span><span class="sr">;</span><span class="nv">Norm</span>
-<span class="nv">r</span><span class="kd">←</span><span class="p">(</span><span class="nv">Norm</span><span class="w"> </span><span class="nv">a</span><span class="p">)</span><span class="o">≡</span><span class="p">(</span><span class="nv">Norm</span><span class="w"> </span><span class="nv">b</span><span class="p">)</span>
+<p>Define the tradfn <code>Anagram</code> in your active workspace.</p>
+<div class="highlight"><pre><span></span><code><span class="bp">∇</span><span class="w"> </span><span class="nv">r</span><span class="kd">←</span><span class="nv">Anagram</span><span class="w"> </span><span class="nv">b</span><span class="sr">;</span><span class="nv">Norm</span>
+<span class="w">  </span><span class="nv">r</span><span class="kd">←</span><span class="p">(</span><span class="nv">Norm</span><span class="w"> </span><span class="nv">a</span><span class="p">)</span><span class="o">≡</span><span class="p">(</span><span class="nv">Norm</span><span class="w"> </span><span class="nv">b</span><span class="p">)</span>
+<span class="bp">∇</span>
 </code></pre></div>
 <p>Then define the following dfn.</p>
 <div class="highlight"><pre><span></span><code><span class="nv">Norm</span><span class="kd">←</span><span class="kt">{</span><span class="bp">⍵</span><span class="sr">[</span><span class="o">⍋</span><span class="bp">⍵</span><span class="sr">]</span><span class="o">~</span><span class="s1">&#39; &#39;</span><span class="kt">}</span>
@@ -625,7 +627,7 @@ Hex[2] bytes←&#39;UTF-8&#39;∘⎕UCS¨⊃⎕NGET file 1
 <span class="w">      </span><span class="nv">Report</span><span class="o">⊂</span><span class="s1">&#39;file&#39;</span><span class="w"> </span><span class="nv">file</span>
 <span class="w">    </span><span class="bp">∇</span>
 
-<span class="w">    </span><span class="bp">∇</span><span class="w"> </span><span class="nv">Report</span><span class="w"> </span><span class="nv">names_values</span>
+<span class="w">    </span><span class="bp">∇</span><span class="w"> </span><span class="nv">Report</span><span class="w"> </span><span class="nv">names_values</span><span class="sr">;</span><span class="nv">error</span>
 <span class="w">      </span><span class="nv">error</span><span class="kd">←</span><span class="o">⊂↑</span><span class="nf">⎕DM</span>
 <span class="w">      </span><span class="nv">error</span><span class="o">,</span><span class="kd">←</span><span class="o">⊂↑</span><span class="nv">names_values</span>
 <span class="w">      </span><span class="vg">⎕</span><span class="kd">←</span><span class="s1">&#39;An error occurred. Error information in app.error:&#39;</span>
