@@ -3,9 +3,12 @@ Error handling and debugging
 
 ## An Honest Mistake
 
+Define the tradfn `Anagram` in your active workspace.
+
 ```apl
-r←Anagram b;Norm
-r←(Norm a)≡(Norm b)
+∇ r←Anagram b;Norm
+  r←(Norm a)≡(Norm b)
+∇
 ```
 
 Then define the following dfn.
@@ -45,9 +48,7 @@ This scripted namespace defines a toy app to read a UTF-8 text file and convert 
 
 The author of the function modifies it to exhibit certain error handling behaviours. Unfortunately, their code has bugs. Investigate the following scenarios and try to solve the issues.
 
-1.  
-	
-	The author has set up error trapping. They are aware of a potential `FILE NAME ERROR`, but have also set up a global trap in case any unexpected errors occur.
+1.  The author has set up error trapping. They are aware of a potential `FILE NAME ERROR`, but have also set up a global trap in case any unexpected errors occur.
 	
     ```apl
 	:Namespace app
@@ -102,9 +103,7 @@ The author of the function modifies it to exhibit certain error handling behavio
     ```
 	
 
-1.  
-	
-	Now that the file name error is handled, they want to test the application using a file. Paste the following into a text editor and save it somewhere. Update `app.file` to point to the correct location.
+1.  Now that the file name error is handled, they want to test the application using a file. Paste the following into a text editor and save it somewhere. Update `app.file` to point to the correct location.
 	
     ```
 	sample text
@@ -145,7 +144,7 @@ The author of the function modifies it to exhibit certain error handling behavio
 	      Report⊂'file' file
 	    ∇
 	
-	    ∇ Report names_values
+	    ∇ Report names_values;error
 	      error←⊂↑⎕DM
 	      error,←⊂↑names_values
 	      ⎕←'An error occurred. Error information in app.error:'
