@@ -127,7 +127,13 @@
 	ENTER
 	```
 
-1. Bus stops in a town are labelled **A** to **E**. Define a function RouteMatrix which returns a Boolean matrix where `1`s indicate that buses go from one bus stop to the next.
+1. Bus stops in a town are labelled **A** to **E**.
+
+	We can define a graph using a nested list of character arrays. For each position in our graph, we say which bus stops are reachable directly from this stop.
+
+	For example, `('BE' 'C' 'AE' 'BCE' 'A')` means that there is a bus that goes from stop **A** to stops **B** and **E**, from stop **B** to stop **C**, from **C** to **A** and **E**, etc.
+
+	Define a function RouteMatrix which returns a Boolean matrix where `1`s indicate that buses go from the stop indicated by the column position to stops indicated by row positions.
 
 	```APL
 	      RouteMatrix 'BE' 'C' 'AE' 'BCE' 'A'
@@ -137,13 +143,13 @@
 	0 0 0 0 0
 	1 0 1 1 0
 
-	      'ABCDE'⍪RouteMatrix 'C' 'CDE' 'ABDE' 'E' 'B'
-	A B C D E
-	0 0 1 0 0
-	0 0 1 0 1
-	1 1 0 0 0
-	0 1 1 0 0
-	0 1 1 1 0
+	      ' ABCDE','ABCDE'⍪RouteMatrix 'C' 'CDE' 'ABDE' 'E' 'B'
+	  A B C D E
+	A 0 0 1 0 0
+	B 0 0 1 0 1
+	C 1 1 0 0 0
+	D 0 1 1 0 0
+	E 0 1 1 1 0
 	```
 
 1. These are the heights of some students in 3 classes.
