@@ -204,7 +204,7 @@ Write a function that behaves like the APL <em>index-of</em> function <a href="h
 ## 2021-7: Can You Feel the Magic?
 
 <div>
-      <img src="/img/magic-square.png" style="float:right;width:250px;margin-left:20px;" />
+      <img src="../img/magic-square.png" style="float:right;width:250px;margin-left:20px;" />
 </div>
 <p><a href="https://en.wikipedia.org/wiki/Magic_square">Wikipedia</a> states that, in recreational mathematics, a square array of numbers, usually positive integers, is called a magic square if the sums of the numbers in each row, each column, and both main diagonals are the same.</p>
 <p>Write a function to test whether an array is a magic square. The function must:</p>
